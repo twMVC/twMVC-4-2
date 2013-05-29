@@ -1,0 +1,24 @@
+﻿<script type="text/javascript">
+    $(function () {
+        $("#uploadify_" + "@ViewData.TemplateInfo.HtmlFieldPrefix").uploadify({
+            height: 30,
+            swf: '/Scripts/uploadify/uploadify.swf',
+            uploader: '@Url.Action("UploadImage","Base")',
+            fileObjName: 'file',
+            onUploadSuccess: function (file, data, response) {
+                $('#imagebox_' + "@ViewData.TemplateInfo.HtmlFieldPrefix").html('<img src="' + data + '" />');
+                $('#' + "@ViewData.TemplateInfo.HtmlFieldPrefix").val(data);
+            },
+            width: 120
+        });
+    });
+</script>
+
+<div id="imagebox_@(ViewData.TemplateInfo.HtmlFieldPrefix)">
+    @if (!String.IsNullOrWhiteSpace(Convert.ToString(ViewData.TemplateInfo.FormattedModelValue)))
+    {
+        <img src="@ViewData.TemplateInfo.FormattedModelValue" />
+    }
+</div>
+<input type="file" name="file" id="uploadify_@(ViewData.TemplateInfo.HtmlFieldPrefix)" />
+@Html.Hidden("", ViewData.TemplateInfo.FormattedModelValue)

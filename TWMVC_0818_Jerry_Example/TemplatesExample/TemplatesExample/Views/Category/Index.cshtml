@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TemplatesExample.Category>
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table>
+    <tr>
+        <td colspan="2" class="topbar">
+        </td>
+        <td>
+            <input type="button" value="新增" onclick="location.href='/Category/Create';" />
+        </td>
+    </tr>
+    <tr>
+		<th>名稱</th>
+		<th>開啟</th>
+		<th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+		<td>@Html.DisplayFor(p => item.Name)</td>
+		<td>@Html.DisplayFor(p => item.Enabled)</td>
+		<td>
+            <a href="@Url.Action("Edit", new { id=item.Id })">編輯</a> | 
+            <a href="@Url.Action("Delete", new { id=item.Id })" onclick="if(!confirm('確定要刪除嗎?')){return false;}">刪除</a>
+        </td>
+    </tr>                   
+    }
+</table>

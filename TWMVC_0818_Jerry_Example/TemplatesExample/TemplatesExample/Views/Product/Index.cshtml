@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TemplatesExample.Product>
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table>
+    <tr>
+        <td colspan="5" class="topbar">
+        </td>
+        <td>
+            <input type="button" value="新增" onclick="location.href='/Product/Create';" />
+        </td>
+    </tr>
+    <tr>
+		<th>名稱</th>
+		<th>價格</th>
+		<th>開啟</th>
+		<th>圖片</th>
+		<th>類別</th>
+		<th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+		<td>@Html.DisplayFor(p => item.Name)</td>
+		<td>@Html.DisplayFor(p => item.Price)</td>
+		<td>@Html.DisplayFor(p => item.Enabled)</td>
+		<td>@Html.DisplayFor(p => item.Image)</td>
+		<td>@Html.DisplayFor(p => item.Category.Name)</td>
+		<td>
+            <a href="@Url.Action("Edit", new { id=item.Id })">編輯</a> | 
+            <a href="@Url.Action("Delete", new { id=item.Id })" onclick="if(!confirm('確定要刪除嗎?')){return false;}">刪除</a>
+        </td>
+    </tr>                   
+    }
+</table>

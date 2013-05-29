@@ -1,0 +1,146 @@
+body{
+	background-image:url(../i/bg.jpg);
+	}
+/*Header標題*/
+h2{
+	color:#333;
+	font-size:17px;
+	margin:0;
+	padding:15px;
+	background-color:#EEEEEE;
+	}
+ol{
+	margin:10px 0 ;
+	display:block;
+	font-size:15px;
+	text-align:left;
+	}
+ol li{
+	color:#339900;
+	font-size:13px;
+	display:block;
+	padding:10px 10px;
+	background-color:#ffe16a;
+	}
+p{
+	color:#333;
+	padding:10px 0;
+	font-size:13px;
+	line-height:16px;
+	}
+.footerp{
+	font-size:11px;
+	text-align:center;
+	}
+
+/*導覽列*/
+#content-main ul{
+	padding:10px 15px;
+	}
+#content-main ul li{
+	display:inline;
+	padding:10px 2px;
+	font-size:12px;
+	color:#888888;
+	}
+#content-main a{
+	font-size:12px;
+	color:#339900;
+	text-decoration:none;
+	}
+#content-main a:hover{
+	color:#F90;
+	}
+/*Sidebar menu*/	
+#content-sidebar ul li{
+	display:block;
+	margin:1px 0 0 0;
+	font-size:15px;
+	text-align:left;
+	}
+#content-sidebar ul li a{
+	display:block;
+	padding:10px 10px;
+	color:#666;
+	font-size:15px;	
+	text-decoration:none;
+	background-color:#A3DCFF;
+	}
+#content-sidebar ul li a:hover{
+	color:#666;
+	font-weight:lighter;
+	background-color:#EEEEEE;
+	}
+
+/*Sidebar menu-所在選單頁*/	
+#content-sidebar .mark{
+	color:#FFF;
+	background-color:#254f65;
+	}
+/*Table*/
+table{
+	margin:15px 15px;
+	letter-spacing: 0.15mm;
+	}
+th{
+	font-size:13px;
+	background-color:#254f65;
+	color:#FFF;
+	font-weight:lighter;
+	border:1px solid #FFF;
+	padding:10px 0px;
+	line-height:18px;
+	}
+td{
+	font-size:13px;
+	color:#575555;
+	background-color:#EEEEEE;
+	border:1px solid #FFF;
+	text-align:center;
+	padding:8px 15px;
+	line-height:18px;
+	vertical-align:middle;
+	}
+.tdleft{
+	text-align:left;
+	margin:0 15px;
+	}
+/*Table-尺寸*/
+.tds{
+	min-width:70px;
+	}
+.tdm{
+	min-width:150px;
+	}
+.tdl{
+	min-width:230px;
+	}
+.tdxl{
+	min-width:550px;
+	}
+/*Table-特殊*/
+.topbar{
+	text-align:left;
+	}
+.bottombar{
+	padding:5px 10px;
+	text-align:right;
+	}
+	
+/*表單樣式*/
+textarea{
+	width:540px;
+	height:250px;
+	overflow-y:visible;
+	}
+.textname{
+	width:250px;
+	}
+.textnames{
+	width:150px;
+	}
+	
+.field-validation-error span
+{
+    color:Red;
+}

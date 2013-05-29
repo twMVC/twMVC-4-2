@@ -1,0 +1,13 @@
+ProjectName
+
+TemplatesExample
+
+
+
+DropDownList
+
+[UIHint("DropDownListTemplate", "MVC", "OptionLabel", "- ½Ð¿ï¾Ü -", "DropDownListMethodName", "CategoryList")]
+
+Golbal.cs
+
+ModelMetadataProviders.Current = new ExtendDataAnnotationsModelMetadataProvider();

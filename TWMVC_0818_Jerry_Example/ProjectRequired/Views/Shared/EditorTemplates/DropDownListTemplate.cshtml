@@ -1,0 +1,15 @@
+﻿@using Extension.Mvc
+@using TemplatesExample
+@{
+    var optionLabel = Html.GetUIHintParametersValue<string>("OptionLabel");
+
+    var methoName = Html.GetUIHintParametersValue<string>("DropDownListMethodName");
+
+    var source = typeof(DropDownListService)
+                    .GetMethod(methoName)
+                    .Invoke(null,
+                            new object[]{ ViewData.TemplateInfo.FormattedModelValue }) 
+                            as IEnumerable<SelectListItem>;
+}
+
+@Html.DropDownList("", source, optionLabel)
